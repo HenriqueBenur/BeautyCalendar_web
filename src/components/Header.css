@@ -1,0 +1,15 @@
+.header {
+    background-color: #FFC0CB;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  /* You may need to adjust the positions or add more icons */
+  

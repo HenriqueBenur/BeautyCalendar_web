@@ -21,7 +21,7 @@
     border-radius: 10px;
   }
   
-  .lights {
+  .SideImg {
     width: 124px;
     height: 129px;
     background-size: cover; /* Ajusta a imagem para cobrir o espaço */
@@ -78,5 +78,6 @@
     width: 14px;
     border: 1px solid #F26D8C;
     transform: rotate(-90deg);
+    z-index: 0;
   }
   

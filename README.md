@@ -1,44 +1,40 @@
 # Beauty Calendar
 
-O Beauty Calendar é uma aplicação web para agendamento de serviços em salões de beleza. A plataforma permite aos usuários visualizar e agendar serviços como cortes de cabelo, manicure e pedicure.
+Beauty Calendar is a web application for scheduling services in beauty salons. The platform allows users to view and schedule services such as haircuts, manicures, and pedicures.
 
-## Características
+## Features
 
-- Visualização de serviços disponíveis
-- Agendamento de serviços
-- Interface intuitiva e responsiva
-- Filtragem de serviços por categoria
+* View available services
+* Schedule services
+* Intuitive and responsive interface
+* Filter services by category
 
-## Tecnologias Utilizadas
+## Technologies Used
 
-Este projeto foi construído com as seguintes tecnologias:
+This project was built using the following technologies:
 
 - [React](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Vite](https://vitejs.dev/)
 - [Vercel](https://vercel.com/)
 
-## Configuração Local
+## Local Setup
 
-Para rodar este projeto localmente, siga os passos abaixo:
+To run this project locally, follow the steps below:
 
-1. Clone o repositório:
+1. Clone the repository:
    ```sh
    git clone https://github.com/HenriqueBenur/BeautyCalendar_web
-
    ```
-2. Instale as dependências:
+2. Install the dependencies:
    ```sh
    npm install
-
    ```
-3. Inicie o servidor de desenvolvimento:
+3. Start the development server:
    ```sh
    npm run dev
-
-
    ```
 
-## Deploy
+## Deployment
 
-O deploy deste projeto é feito através do Vercel. Todo push para o branch main inicia um processo de deploy automático.
+The deployment of this project is done through Vercel. Every push to the main branch initiates an automatic deployment process.

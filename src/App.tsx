@@ -1,17 +1,28 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
-import CarouselMenu from './components/CarouselMenu'
+import CarouselMenu from './components/CarouselMenu';
 import ServiceCardList from './components/ServiceCardList';
-
+import ServiceDetail from './components/ServiceDetail';
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <Header />
-      <CarouselMenu />
-      <ServiceCardList />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Header />
+              <CarouselMenu />
+              <ServiceCardList />
+            </>
+          } />
+          {/* Suponha que ServiceDetail é o componente de detalhes que você deseja renderizar */}
+          <Route path="/service/:id" element={<ServiceDetail />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 

@@ -1,4 +1,15 @@
 .App {
-    text-align: center;
+  margin: 0;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+
+  position: relative;
+  overflow-x: hidden;
+
+  background: #FFFFFF;
+  height: 50%;
   }
   

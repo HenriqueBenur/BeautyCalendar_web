@@ -1,13 +1,16 @@
 import React from 'react';
 import './App.css';
 import Header from './components/Header';
-import ServiceList from './components/ServiceList';
+import CarouselMenu from './components/CarouselMenu'
+import ServiceCardList from './components/ServiceCardList';
+
 
 const App: React.FC = () => {
   return (
     <div className="App">
       <Header />
-      <ServiceList />
+      <CarouselMenu />
+      <ServiceCardList />
     </div>
   );
 }

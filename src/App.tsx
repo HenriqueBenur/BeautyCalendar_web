@@ -18,7 +18,6 @@ const App: React.FC = () => {
               <ServiceCardList />
             </>
           } />
-          {/* Suponha que ServiceDetail é o componente de detalhes que você deseja renderizar */}
           <Route path="/service/:id" element={<ServiceDetail />} />
         </Routes>
       </div>

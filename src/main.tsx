@@ -1,6 +1,7 @@
 // src/index.tsx
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import './reset.css';
 import './main.css';
 import App from './App';
 

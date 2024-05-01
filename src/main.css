@@ -6,11 +6,9 @@ body {
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    width: 100%; /* Garantir que o elemento pai ocupe a largura total */
     display: flex; /* Usar flexbox para facilitar o alinhamento */
     justify-content: center; /* Alinhar horizontalmente ao centro */
     align-items: center; /* Alinhar verticalmente ao centro, se necessário */
-    min-height: 100vh; /* Minha altura para garantir que cubra toda a altura da viewport */
-
+    height: 100vh; /* Minha altura para garantir que cubra toda a altura da viewport */
   }
   

@@ -1,3 +1,10 @@
 #SearchIcon {
-    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Search {
+	width: 4.5801527vw;
+	max-width: 28px;
 }

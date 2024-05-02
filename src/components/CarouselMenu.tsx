@@ -1,23 +1,30 @@
-import React from 'react';
-import './CarouselMenu.css'; // Certifique-se de criar e importar o CSS apropriado
+import React, { useState } from 'react';
+import './CarouselMenu.css';
+import ServiceCardList from './ServiceCardList';
 
 const CarouselMenu = () => {
-  // Lista de serviços para demonstrar o funcionamento do carousel
+  const [activeId, setActiveId] = useState(1);
+
   const services = [
-    { id: 1, name: 'Cortes', style: 'Bubble1' },
-    { id: 2, name: 'Pedicure', style: 'Bubble2' },
-    { id: 3, name: 'Manicure', style: 'Bubble3' },
-    { id: 4, name: 'Manicure', style: 'Bubble3' },
-    { id: 5, name: 'Manicure', style: 'Bubble3' }
+    { id: 1, name: 'Cortes' },
+    { id: 2, name: 'Pedicure' },
+    { id: 3, name: 'Manicure' }
   ];
 
   return (
-    <div className="Carousel">
-      {services.map(service => (
-        <div key={service.id} className={`${service.style}`}>
-          <span className={`${service.name}`}>{service.name}</span>
-        </div>
-      ))}
+    <div className="ContainerCr">
+      <div className='Carousel'>
+        {services.map(service => (
+          <div 
+            key={service.id} 
+            className={`Bubble-${activeId === service.id ? 'active' : ''}`}
+            onClick={() => setActiveId(service.id)}
+          >
+            <span>{service.name}</span>
+          </div>
+        ))}
+      </div>
+      <ServiceCardList activeId={activeId} />
     </div>
   );
 };

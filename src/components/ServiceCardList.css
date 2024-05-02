@@ -21,7 +21,6 @@
     width: 124px;
     height: 153px;
     background-size: cover; /* Ajusta a imagem para cobrir o espaço */
-    background-image: url('./assets/image_46.png');
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
   }
@@ -59,6 +58,7 @@
     align-items: center;
     padding-bottom: 12px;
     padding-top: 12px;
+    width: 100%;
   }
   
   .value #offer {

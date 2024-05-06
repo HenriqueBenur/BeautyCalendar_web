@@ -7,13 +7,15 @@
   display: flex;
   overflow-x: scroll;
   width: 100vw;
-  height: 5.0947867vh;
-  padding-top: 8px;
+  height: 6.042654vh;
   background-color: #FFFFFF;
   flex: none;
   flex-grow: 0;
-  padding-left: 4px;
-  padding-right: 4px;
+  padding-left: 2.0512821vw;
+  padding-right: 2.0512821vw;
+  justify-content: center;
+  align-items: center;
+
 
   /* Hide scrollbar for IE, Edge and Firefox */
   -ms-overflow-style: none;  /* IE and Edge */
@@ -24,7 +26,6 @@
   display: none;
 }
 .Bubble-active {
-  /* Bubble1 */
 
   /* Auto layout */
   display: flex;
@@ -34,7 +35,7 @@
   margin-left: 4px;
   margin-right: 4px;
 
-  width: 131px;
+  width: 120px;
   height: 35px;
 
   /* aa */
@@ -59,10 +60,9 @@
   margin-left: 4px;
   margin-right: 4px;
 
-  
-
-  width: 131px;
+  width: 120px;
   height: 35px;
+
 
   background: #EFEFEF;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);

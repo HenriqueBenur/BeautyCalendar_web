@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
-// Primeiro, defina um tipo para os detalhes do serviço
 type ServiceType = {
-  id: number;
+  id: string;
   title: string;
   description: string;
   price: string;
@@ -11,46 +10,40 @@ type ServiceType = {
 };
 
 const ServiceDetail: React.FC = () => {
-  const { id } = useParams<{id: any}>();
+  const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const [service, setService] = useState<ServiceType | null>(null); // Use o tipo definido
 
-  useEffect(() => {
-    fetchServiceById(parseInt(id)).then(data => {
-      setService(data); // Corrigido o tipo aqui
-    }).catch(error => {
-      console.error('Erro ao buscar detalhes do serviço:', error);
-      navigate('/'); // Redireciona em caso de erro
-    });
-  }, [id, navigate]);
+  // Dados mockados diretamente no estado
+  const mockData: { [key: string]: ServiceType } = {
+    '1a': { id: '1a', title: 'Bob Curto', description: 'Descrição do Bob Curto...', price: 'R$70', offer: 'Nova tendência!' },
+    '1b': { id: '1b', title: 'Long Layers', description: 'Descrição do Long Layers...', price: 'R$80', offer: 'Mais vendido!' },
+    '1c': { id: '1c', title: 'Pixie Cut', description: 'Descrição do Pixie Cut...', price: 'R$90', offer: 'Disponível agora!' },
+    '2a': { id: '2a', title: 'Pedicure Simples', description: 'Descrição da Pedicure Simples...', price: 'R$30', offer: 'Novo!' },
+    '2b': { id: '2b', title: 'Pedicure Completa', description: 'Descrição da Pedicure Completa...', price: 'R$45', offer: 'Últimos lugares!' },
+    '3a': { id: '3a', title: 'Manicure Básica', description: 'Descrição da Manicure Básica...', price: 'R$25', offer: 'Disponível!' },
+    '3b': { id: '3b', title: 'Manicure Francesinha', description: 'Descrição da Manicure Francesinha...', price: 'R$35', offer: 'Promoção especial!' }
+  };
+
+  // Garantir que 'id' sempre será uma string, usando coalescência nula com uma chave padrão ou tratamento para 'undefined'
+  const safeId = id ?? 'defaultKey';
+  const service = mockData[safeId];
 
   const goBack = () => {
     navigate('/');
   };
 
   if (!service) {
-    return <p>Carregando detalhes do serviço...</p>;
+    return <p>Detalhes do serviço não encontrados ou carregando...</p>;
   }
 
   return (
     <div>
       <h1>Detalhes do Serviço {service.title}</h1>
       <p>{service.description}</p>
+      <p>Preço: {service.price} - Oferta: {service.offer}</p>
       <button onClick={goBack}>Voltar para a página principal</button>
     </div>
   );
 };
 
 export default ServiceDetail;
-
-// Corrigir o tipo de serviceId para ser number
-async function fetchServiceById(serviceId: number): Promise<ServiceType> {
-  // Mock de dados retornados como exemplo
-  return Promise.resolve({
-    id: serviceId,
-    title: 'Corte Estilo John Wick',
-    description: 'Estilo matador impecável... Baba yaga',
-    price: 'R$999,00',
-    offer: 'Ainda essa semana!'
-  });
-}

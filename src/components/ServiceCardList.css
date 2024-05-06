@@ -7,7 +7,7 @@
     gap: 16px;
   }
   
-  .serviceCard {
+  #serviceCard {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -17,13 +17,37 @@
     border-radius: 10px;
   }
   
-  .SideImg {
+  #sideImg {
     width: 124px;
     height: 153px;
     background-size: cover; /* Ajusta a imagem para cobrir o espaço */
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
   }
+
+  /*Service card images*/
+  .SideImg1a {
+    background-image: url(./assets/image_1a.png);
+  }
+  .SideImg1b {
+    background-image: url(./assets/image_1a.png);
+  }
+  .SideImg1c {
+    background-image: url(./assets/image_1a.png);
+  }
+  .SideImg2a {
+    background-image: url(./assets/image_1a.png);
+  }
+  .SideImg2b {
+    background-image: url(./assets/image_1a.png);
+  }
+  .SideImg3a {
+    background-image: url(./assets/image_1a.png);
+  }
+  .SideImg3b {
+    background-image: url(./assets/image_1a.png);
+  }
+
   
   .info {
     display: flex;

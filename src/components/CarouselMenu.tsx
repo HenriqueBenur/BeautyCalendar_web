@@ -4,6 +4,7 @@ import ServiceCardList from './ServiceCardList';
 
 const CarouselMenu = () => {
   const [activeId, setActiveId] = useState(1);
+  console.log("Defined ID: ",activeId);
 
   const services = [
     { id: 1, name: 'Cortes' },

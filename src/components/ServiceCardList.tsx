@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './ServiceCardList.css';
 
 interface Service {
@@ -20,8 +21,9 @@ interface ServiceCardListProps {
 const ServiceCardList = ({ activeId }: ServiceCardListProps) => {
   const serviceData: ServiceData = {
     1: [
-      { id: '1a', title: 'Corte Clássico', description: 'Descrição do Corte Clássico...', price: 'R$ 50', offer: 'Disponível agora!' },
-      { id: '1b', title: 'Corte Moderno', description: 'Descrição do Corte Moderno...', price: 'R$ 60', offer: 'Promoção!' }
+      { id: '1a', title: 'Bob Curto', description: 'Perfeito para quem busca um visual prático e moderno. Este corte na altura do queixo oferece versatilidade e estilo.', price: 'R$ 70', offer: 'Nova tendência!' },
+      { id: '1b', title: 'Long Layers', description: 'Camadas longas que adicionam movimento e leveza aos cabelos longos. Ideal para dar volume e forma sem sacrificar o comprimento.', price: 'R$ 80', offer: 'Mais vendido!' },
+      { id: '1c', title: 'Pixie Cut', description: 'Corte super curto que combina praticidade e ousadia. Fácil de manter e perfeito para um look cheio de atitude.', price: 'R$ 90', offer: 'Disponível agora!' }
     ],
     2: [
       { id: '2a', title: 'Pedicure Simples', description: 'Descrição da Pedicure Simples...', price: 'R$ 30', offer: 'Novo!' },
@@ -33,18 +35,20 @@ const ServiceCardList = ({ activeId }: ServiceCardListProps) => {
     ],
   };
 
+  const navigate = useNavigate();
   const services = serviceData[activeId] || [];
 
   // Função para manipular o clique em um card
   const handleCardClick = (id: string) => {
-    console.log("Clicado:", id); // Substitua isso pelo que você precisa fazer no clique
+    // Navega para a página de detalhes do serviço
+    navigate(`/service/${id}`);
   };
 
   return (
     <div className="serviceCardList">
       {services.map(service => (
-        <div key={service.id} className="serviceCard" onClick={() => handleCardClick(service.id)}>
-          <div className="SideImg" style={{ backgroundImage: `/assets/image-${service.id}.png)` }}></div>
+        <div id="serviceCard" key={service.id} className= {`Service${service.id}`} onClick={() => handleCardClick(service.id)}>
+          <div className={`SideImg${service.id}`} id="sideImg"></div>
           <div className="info">
             <h3>{service.title}</h3>
             <p>{service.description}</p>

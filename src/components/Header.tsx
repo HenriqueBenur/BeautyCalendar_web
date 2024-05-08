@@ -1,8 +1,8 @@
 import React from 'react';
 import './Header.css';
-import LogoSVG from './LogoSVG'
-import HamburgerSVG from './HamburgerSVG';
-import SearchSVG from './SearchSVG';
+import LogoSVG from './assets/Svg/LogoSVG'
+import HamburgerSVG from './assets/Svg/HamburgerSVG';
+import SearchSVG from './assets/Svg/SearchSVG';
 
 const Header: React.FC = () => {
   return (

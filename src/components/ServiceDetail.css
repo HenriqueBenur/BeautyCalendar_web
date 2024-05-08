@@ -1,0 +1,52 @@
+.detailBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.HeaderInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+
+    width: 100vw;
+    height: 21.3270142vh;
+
+    /* Gradient */
+    background: linear-gradient(90deg, #FDBD98 1.5%, #F26D8C 98%);
+    border-radius: 0px 0px 2.5641026vw 2.5641026vw;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    z-index: 0;
+}
+.ButtonContainer {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    column-gap: 76.9230769vw;
+}
+.serviceTitle {
+    font-family: 'Imbue';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 8.2051282vw;
+    color: #FFFFFF;
+    margin: 0%;
+    text-align: center;
+
+    width: 66.1538462vw;
+}
+.serviceDescription {
+    font-family: 'Imbue';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.7906977vh;
+    color: #FFFFFF;
+    margin: 0%;
+}

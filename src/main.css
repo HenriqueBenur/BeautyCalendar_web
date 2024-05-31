@@ -11,4 +11,6 @@ body {
     align-items: center; /* Alinhar verticalmente ao centro, se necessário */
     height: 100vh; /* Minha altura para garantir que cubra toda a altura da viewport */
   }
-  
+#root {
+  max-width: -webkit-fill-available;
+}

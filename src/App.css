@@ -1,5 +1,5 @@
 .App {
-  background: #FFFFFF;
+  background: var(--bg-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,13 +13,17 @@
 
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
-
-
-  background: #FFFFFF;
   }
 
 /* Safari e Chrome, etc. */
 .App::-webkit-scrollbar {
   display: none;
   }
-  
+.separatorTab1 {
+  background-color: var(--bg-color);
+  display: inherit;
+  flex-direction: inherit;
+  align-items: inherit;
+  width: inherit;
+  height: 100vh;
+}

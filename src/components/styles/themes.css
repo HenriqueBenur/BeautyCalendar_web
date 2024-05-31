@@ -1,0 +1,25 @@
+/* src/styles/themes.css */
+:root {
+    --text-color: #474747; /* Default text color */
+    --highlight-text-color: #FFFFFF; /* Default highlight text color */
+    --bg-color: #FFFFFF; /* Default background color */
+  }
+  
+  [data-theme="dark"] {
+    --text-color: #d1d1d1; /* Default text color */
+    --highlight-text-color: #FFFFFF; /* Default highlight text color */
+    --bg-color: #36454F; /* Dark mode colors */
+    --gradient-color-1: #7087B1; /* First Gradient Color */
+    --gradient-color-2: #C3657F; /* Second Gradient Color */
+    --gradient-test: linear-gradient(90deg, #7087B1 1.5%, #C3657F 98%);
+  }
+  
+  [data-theme="light"] {
+    --text-color: #474747; /* Default text color */
+    --highlight-text-color: #FFFFFF; /* Default highlight text color */
+    --bg-color: #FFFFFF; /* Default background color */
+    --gradient-color-1: #FCB696; /* First Gradient Color */
+    --gradient-color-2: #F2738C; /* Second Gradient Color */
+    --gradient: linear-gradient(90deg, #FDBD98 1.5%, #F26D8C 98%);
+  }
+  

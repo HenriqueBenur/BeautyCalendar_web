@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './ServiceCardList.css';
+import './styles/ServiceCardList.css';
 
 interface Service {
   id: string;

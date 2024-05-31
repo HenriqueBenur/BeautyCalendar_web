@@ -78,8 +78,18 @@ height: 49px;
 
 /* Gradient BC */
 background: linear-gradient(90deg, #FDBD98 1.5%, #F26D8C 98%);
-box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
 border-radius: 14px;
+border: #ffffff00;
+
+/*Text styling*/
+color: #FFFFFF;
+font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: 0.05em;
 
 /* Inside auto layout */
 flex: none;
@@ -134,4 +144,15 @@ background-image: url(./assets/detail.png);
         max-width: 640px;
         max-height: 354px;
     }
+}
+
+.separatorTab2 {
+    background-color: rgb(255, 255, 255);
+    display: inherit;
+    flex-direction: inherit;
+    align-items: inherit;
+    text-align: inherit;
+    width: inherit;
+    height: 100vh;
+    row-gap: inherit;
 }

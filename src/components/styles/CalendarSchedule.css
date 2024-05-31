@@ -1,0 +1,173 @@
+/* src/components/CalendarSchedule.css */
+
+.ScheduleBody {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    
+    align-items: center;
+    text-align: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    color: var(--text-color);
+  }
+  
+.HeadElements {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 0px 67px;
+  gap: 9px;
+
+  width: 100vw;
+  height: 182px;
+
+  /* Gradient BC */
+  background: var(--gradient);
+  border-radius: 0px 0px 16px 16px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: -41px 0px;
+}
+
+.ButtonsLayout {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 78.2051282vw;
+
+  width: 353px;
+  height: 24px;
+
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.HeadText {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+
+  width: 233px;
+  height: 38px;
+
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.ScheduleText {
+
+  /* Schedule */
+  width: 203px;
+  height: 38px;
+
+  font-family: 'Imbue';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  color: #FFFFFF;
+
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.calendarOverlay {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+
+  width: 100vw;
+  height: 380px;
+
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.buttonCover {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 0px 30px;
+  gap: 10px;
+
+  position: absolute;
+  width: 100vw;
+  height: 107px;
+  left: 0px;
+  bottom: 0px;
+
+  background: #F1F1F1;
+  border-radius: 16px 16px 0px 0px;
+}
+
+.ScheduleButton {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 40px;
+  gap: 10px;
+
+  width: 361px;
+  height: 49px;
+
+  /* Gradient BC */
+  background: linear-gradient(90deg, #FDBD98 1.5%, #F26D8C 98%);
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 14px;
+  border: 0;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+
+  color: var(--highlight-text-color);
+  }
+  
+.ScheduleButton:hover {
+    background-color: #fd719c;
+  }
+  

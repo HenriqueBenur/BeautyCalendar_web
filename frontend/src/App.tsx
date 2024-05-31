@@ -5,16 +5,28 @@ import './App.css';
 import './transitions.css';
 import Header from './components/Header';
 import CarouselMenu from './components/CarouselMenu';
-import ServiceCardList from './components/ServiceCardList';
 import ServiceDetail from './components/ServiceDetail';
 import CalendarSchedule from './components/CalendarSchedule';
 import LoadingScreen from './components/LoadingScreen';
 import { ThemeProvider, useTheme } from './context/ThemeContext';
 import './components/styles/themes.css';
+import axios from 'axios';
 
 const AnimatedRoutes = () => {
   const location = useLocation();
   const { theme } = useTheme();  // Using the theme from ThemeContext
+  const [fetchedMessage, setMessage] = useState('');
+
+  useEffect(() => {
+    axios.get('/api/example')
+      .then(response => {
+        setMessage(response.data.message);
+        console.log(response.data.message);
+      })
+      .catch(error => {
+        console.error('There was an error making the request!', error);
+      });
+  }, []);
 
   return (
     <div data-theme={theme}>
@@ -29,6 +41,7 @@ const AnimatedRoutes = () => {
               <div className='separatorTab1'>
                 <Header />
                 <CarouselMenu />
+                <p>server message: {fetchedMessage}</p>
               </div>
             </>
           } />

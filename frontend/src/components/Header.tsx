@@ -4,6 +4,7 @@ import LogoSVG from './assets/Svg/LogoSVG'
 import HamburgerSVG from './assets/Svg/HamburgerSVG';
 import SearchSVG from './assets/Svg/SearchSVG';
 import SideMenu from './SideMenu';
+import pinguelo from './assets/LogoFullPNG.png'
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,10 +13,7 @@ const Header: React.FC = () => {
   return (
     <header className="header">
       <div id='LogoFull'>
-        <h1 id='BeautyCalendar'>Beauty Calendar</h1>
-        <div id='Pinguelo'>
-          <LogoSVG />
-        </div>
+        <img src={pinguelo} alt="logo-missing" id='beautyCalendar'/>
       </div>
       <div id='TopButtons'>
         <div id='SearchButton'>

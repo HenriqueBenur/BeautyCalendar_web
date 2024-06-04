@@ -1,27 +1,47 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './styles/CarouselMenu.css';
 import ServiceCardList from './ServiceCardList';
+import axios from 'axios';
+
+const api = axios.create({
+  baseURL: 'http://localhost:5000'
+});
+
+type ServiceType = {
+  id: string;
+  category: string;
+  title: string;
+  description: string;
+  price: string;
+  offer: string;
+};
 
 const CarouselMenu = () => {
   const [activeId, setActiveId] = useState(1);
-  console.log("Defined ID: ",activeId);
+  const [categories, setCategories] = useState<string[]>([]);
 
-  const services = [
-    { id: 1, name: 'Cortes' },
-    { id: 2, name: 'Pedicure' },
-    { id: 3, name: 'Manicure' }
-  ];
+  useEffect(() => {
+    api.get('/api/services')
+      .then(response => {
+        const services: ServiceType[] = response.data.services;
+        const uniqueCategories = Array.from(new Set(services.map(service => service.category)));
+        setCategories(uniqueCategories);
+      })
+      .catch(error => {
+        console.error('There was an error fetching the services data!', error);
+      });
+  }, []);
 
   return (
     <div className="ContainerCr">
       <div className='Carousel'>
-        {services.map(service => (
+        {categories.map((category, index) => (
           <div 
-            key={service.id} 
-            className={`Bubble-${activeId === service.id ? 'active' : ''}`}
-            onClick={() => setActiveId(service.id)}
+            key={index} 
+            className={`Bubble-${activeId === index + 1 ? 'active' : ''}`}
+            onClick={() => setActiveId(index + 1)}
           >
-            <span>{service.name}</span>
+            <span>{category}</span>
           </div>
         ))}
       </div>

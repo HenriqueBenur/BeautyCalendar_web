@@ -1,40 +1,57 @@
-# Beauty Calendar
+# Beauty Calendar Project
 
-Beauty Calendar is a web application for scheduling services in beauty salons. The platform allows users to view and schedule services such as haircuts, manicures, and pedicures.
+## Overview
 
-## Features
+The Beauty Calendar Project is a web application designed to facilitate appointment scheduling for beauty salons. This project is built using a React frontend and a Flask backend. 
 
-* View available services
-* Schedule services
-* Intuitive and responsive interface
-* Filter services by category
+## Table of Contents
 
-## Technologies Used
+1. [Backend Setup](#backend-setup)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+    - [Running the Server](#running-the-server)
+2. [Frontend Setup](#frontend-setup)
+    - [Installation](#installation-1)
+    - [Running the Development Server](#running-the-development-server)
+3. [Configuration](#configuration)
+4. [Technologies Used](#technologies-used)
+5. [Contributing](#contributing)
+6. [License](#license)
 
-This project was built using the following technologies:
+## Backend Setup
 
-- [React](https://reactjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Vite](https://vitejs.dev/)
-- [Vercel](https://vercel.com/)
+### Prerequisites
 
-## Local Setup
+- Python 3.9 or higher
+- pip (Python package installer)
+- virtualenv (optional, but recommended)
 
-To run this project locally, follow the steps below:
+### Installation
 
-1. Clone the repository:
+1. **Clone the repository:**
    ```sh
-   git clone https://github.com/HenriqueBenur/BeautyCalendar_web
-   ```
-2. Install the dependencies:
-   ```sh
-   npm install
-   ```
-3. Start the development server:
-   ```sh
-   npm run dev
-   ```
+   git clone https://github.com/yourusername/beauty-calendar-project.git
+   cd beauty-calendar-project/backend
 
-## Deployment
+2. **Create a virtual environment:**
+   ```sh
+   python3 -m venv venv
 
-The deployment of this project is done through Vercel. Every push to the main branch initiates an automatic deployment process.
+3. **Activate the virtual environment:**
+   - On Windows:
+      ```sh
+      venv\Scripts\activate
+   - On macOS/Linux:
+      ```sh
+      source venv/bin/activate
+4. **Install the required dependencies:**
+   ```sh
+   pip install -r requirements.txt
+### Running the Server
+1. *Start the Flask server:*
+   ```sh
+   python app.py
+   ````
+   By default, the server will run on http://0.0.0.0:5000.
+### Backend API Endpoints
+- `GET /api/example` - Returns a sample message to ensure the backend is working.

@@ -11,7 +11,7 @@ import axios from 'axios';
 import AppointmentConfirmation from './AppointmentConfirmation';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000'
+  baseURL: 'https://bc-backend-2db6.onrender.com'
 });
 
 const CalendarSchedule: React.FC = () => {
